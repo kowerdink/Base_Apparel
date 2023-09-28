@@ -15,6 +15,8 @@ body {
     width: 100%;
 }
 
+/* -------------- Contenido ------------------------ */
+
 .content {
     display: flex;
     width: 100%;
@@ -22,9 +24,6 @@ body {
     background-image: url(./images/bg-pattern-desktop.svg);
     background-size: contain;
     
-}
-.title  {
-    margin-bottom: 5rem;
 }
 
 .asideTitles {
@@ -35,6 +34,11 @@ body {
     
 }
 
+/* -------------- Titles------------------------ */
+
+.title  {
+    margin-bottom: 5rem;
+}
 .mainInfo {
     display: flex;
     flex-direction: column;
@@ -59,10 +63,12 @@ body {
 }
 
 
+/* -------------- Form ------------------------ */
+
 .inputMail {
     display: relative;
     margin-top: 1rem;
-    width: 75%;
+    width: 60%;
 
 }
 .inputMail form {
@@ -97,11 +103,16 @@ body {
     background: linear-gradient(135deg, #f29f9f 0%, #ff67c5 100%); 
 }
 
+
+/* -------------- Imagen ------------------------ */
+
 .Picture {
     display: flex;
     justify-content: end;
    
 }
+
+/* -------------- footer ------------------------ */
 
 footer {
     height: 50px;
@@ -123,4 +134,70 @@ footer a {
 }
 footer a:hover {
     color: rgba(13, 37, 54, 0.927);
+}
+
+/* ---------------- Responsive -------------------*/
+
+.none {
+    display: none;
+}
+
+/* ---------------- Responsive -------------------*/
+
+@media screen and (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: auto;
+    }
+
+    .title {
+        position: absolute;
+        top: 35px
+    }
+
+    .asideTitles {
+        width: 100%;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .mainInfo h1 {
+        font-size: 3rem;
+    }
+    
+    .mainInfo p {
+        line-height: 1.5rem;
+        font-size: 14px;
+    }
+
+    .inputMail {
+       width: 100%;
+    }
+
+    .Picture {
+        width: 100%;
+        justify-content: flex-start;
+        position: relative;
+        margin-top: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .Picture img:nth-child(1){
+        display: block;
+    }
+    .Picture img:nth-child(2){
+        display: none;
+    }
+
+    .Picture img {
+        width: 100%;
+    }
+
+  
 }
