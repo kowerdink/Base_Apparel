@@ -18,8 +18,11 @@ body {
 .content {
     display: flex;
     width: 100%;
+    height: 100vh;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: contain;
+    
 }
-
 .title  {
     margin-bottom: 5rem;
 }
@@ -29,8 +32,7 @@ body {
     width: 80%;
     flex-direction: column;
     padding: 3rem 9rem;
-    background-image: url(./images/bg-pattern-desktop.svg);
-    background-size: cover;
+    
 }
 
 .mainInfo {
@@ -56,13 +58,19 @@ body {
     color:hsl(0, 36%, 70%);
 }
 
-.mainInfo form div {
-    display: flex;
-    width: 100%; 
-}
 
-.mainInfo form div input {
-    width: 70%;
+.inputMail {
+    display: relative;
+    margin-top: 1rem;
+    width: 75%;
+
+}
+.inputMail form {
+    display:block;
+    position: relative;
+}
+.inputMail form input {
+    width: 100%;
     padding: 1rem;
     font-size: 1rem;
     border-radius: 40px;
@@ -70,7 +78,10 @@ body {
     outline: none;
     opacity: 0.9;
 }
-.mainInfo form button {
+.inputMail form button {
+    position: absolute;
+    top: 0;
+    right: 0;
     border: none;
     padding: 0.9rem;
     width: 110px;
@@ -79,15 +90,17 @@ body {
     background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%); 
     transition: background-color ease 0.3s;
     cursor: pointer;
-    box-shadow: -1px 0px 7px -2px rgba(33,33,33,0.75);
-    -moz-box-shadow: -1px 0px 0.7rem -2px rgba(33,33,33,0.75);
+    box-shadow: -1px 12px 15px -2px rgba(238, 112, 112, 0.75);
+    -moz-box-shadow: -1px 12px 0.7rem -2px rgba(238, 112, 112, 0.75);
 }
-.mainInfo form button:hover {
+.inputMail form button:hover {
     background: linear-gradient(135deg, #f29f9f 0%, #ff67c5 100%); 
 }
 
 .Picture {
     display: flex;
+    justify-content: end;
+   
 }
 
 footer {
